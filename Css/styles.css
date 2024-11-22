@@ -1,0 +1,62 @@
+body {
+    background-color: #1e1e1e; /* Cor de fundo do terminal */
+    color: #ffffff; /* Cor do texto */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    border: 1px solid #00ff00; /* Borda verde */
+}
+
+.command-line {
+    display: flex;
+    align-items: center; /* Alinha o texto e a entrada verticalmente */
+}
+
+.command-line input {
+    background-color: #1e1e1e; /* Fundo da entrada */
+    color: #00ff00; /* Texto verde */
+    border: none;
+    padding: 10px;
+    width: 100%; /* Ocupa toda a largura */
+    outline: none; /* Remove a borda de foco padrão */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.command-line span {
+    margin-right: 10px; /* Espaço entre o texto do comando e a entrada */
+}
+
+.output {
+    margin-top: 10px;
+    white-space: pre-wrap; /* Mantém a formatação do texto */
+}
+
+.output div {
+    margin: 5px 0;
+}
+
+/* Estilo para o cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #00ff00;
+    animation: blink 1s step-end infinite;
+}
+
+.outputCommand {
+    color: #00ff00; /* Cor verde */
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent; /* Pisca o cursor */
+    }
+}
