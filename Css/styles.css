@@ -1,6 +1,6 @@
 body {
-    background-color: #1e1e1e; /* Cor de fundo do terminal */
-    color: #ffffff; /* Cor do texto */
+    background-color: #1e1e1e;
+    color: #ffffff; 
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
@@ -12,38 +12,37 @@ body {
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
-    border: 1px solid #00ff00; /* Borda verde */
+    border: 1px solid #00ff00;
 }
 
 .command-line {
     display: flex;
-    align-items: center; /* Alinha o texto e a entrada verticalmente */
+    align-items: center; 
 }
 
 .command-line input {
-    background-color: #1e1e1e; /* Fundo da entrada */
-    color: #00ff00; /* Texto verde */
+    background-color: #1e1e1e; 
+    color: #00ff00; 
     border: none;
     padding: 10px;
-    width: 100%; /* Ocupa toda a largura */
-    outline: none; /* Remove a borda de foco padrão */
-    font-size: 16px; /* Tamanho da fonte */
+    width: 100%; 
+    outline: none;
+    font-size: 16px; 
 }
 
 .command-line span {
-    margin-right: 10px; /* Espaço entre o texto do comando e a entrada */
+    margin-right: 10px; 
 }
 
 .output {
     margin-top: 10px;
-    white-space: pre-wrap; /* Mantém a formatação do texto */
+    white-space: pre-wrap;
 }
 
 .output div {
     margin: 5px 0;
 }
 
-/* Estilo para o cursor */
 .cursor {
     display: inline-block;
     width: 10px;
@@ -52,11 +51,11 @@ body {
 }
 
 .outputCommand {
-    color: #00ff00; /* Cor verde */
+    color: #00ff00;
 }
 
 @keyframes blink {
     50% {
-        background-color: transparent; /* Pisca o cursor */
+        background-color: transparent;
     }
 }

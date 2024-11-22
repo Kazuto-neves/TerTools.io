@@ -61,7 +61,6 @@ function executeCommand(command, commandInput) {
     const commandText = document.getElementById('command-text').innerText;
     const [cmd, ...args] = command.split(' ');
 
-    // Criação do elemento de saída do comando
     const commandOutput = document.createElement('div');
     commandOutput.className = 'command-output';
     commandOutput.innerHTML = `${commandText} <span style="color: #00ff00;">${command}</span>`;
@@ -89,7 +88,6 @@ function executeCommand(command, commandInput) {
     }
     outputDiv.scrollTop = outputDiv.scrollHeight;
 
-    // Limpar o campo de entrada após o comando ser executado
     commandInput.value = '';
 }
 
