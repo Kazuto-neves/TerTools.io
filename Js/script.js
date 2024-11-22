@@ -37,13 +37,10 @@ function createCommandLine(outputDiv) {
 
     const commandInput = document.createElement('input');
     commandInput.type = 'text';
-
-    const cursor = document.createElement('span');
-    cursor.className = 'cursor';
+    commandInput.classList.add('blinking'); // Adiciona a classe blinking
 
     commandLine.appendChild(commandText);
     commandLine.appendChild(commandInput);
-    commandLine.appendChild(cursor);
 
     return commandLine;
 }
@@ -97,12 +94,12 @@ function processMorseConversion(outputDiv, input, conversionFunction) {
 }
 
 function processRomanConversion(outputDiv, input, conversionFunction) {
-    const number = parseInt(input, 10);
-    if (isNaN(number)) {
-        outputDiv.innerHTML += `<div>> Entrada inválida para conversão: ${input}</div>`;
-    } else {
-        const result = conversionFunction(number);
+    // Tente converter a entrada usando a função de conversão
+    try {
+        const result = conversionFunction(input); // Chame a função de conversão diretamente
         outputDiv.innerHTML += `<div>> ${result}</div>`;
+    } catch (error) {
+        outputDiv.innerHTML += `<div>> Entrada inválida para conversão: ${input}</div>`;
     }
 }
 
